@@ -6,6 +6,12 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 
 
+// This test case checks if the web site operates properly our trying to submit form
+// with different passwords in the text areas for matching passwords
+
+// EXPECTED RESULT: After pushing register button web page is the same
+// Pass/fail: pass
+
 public class TCase12PasswdConfirmDoesntMatch {
 
 	@BeforeClass
