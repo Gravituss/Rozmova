@@ -25,6 +25,24 @@ public class CommonMethods {
 	public static final String ID_PASSWORD_TEXT_AREA = "login_password";
 	public static final String LOCATOR_ENTER_BUTTON = "//*[contains(@class,'enter-submit')]";
 	
+	//----------------------------------------------------------
+	
+	public static final String ID_EMAIL_TEXT_AREA_REG = "register_username";
+	public static final String ID_NAME_TEXT_AREA_REG = "register_name";
+	public static final String ID_SURNAME_TEXT_AREA_REG = "register_surname";
+	public static final String ID_NICKNAME_TEXT_AREA_REG = "register_nickname";
+	public static final String ID_PASSWD_TEXT_AREA_REG = "register_password";
+	public static final String ID_PASSWD_AGAIN_TEXT_AREA_REG = "register_password_confirm";
+	
+	public static final String ID_DAY_OF_BIRTH_REG = "register_b_day";
+	public static final String ID_MONTH_OF_BIRTH_REG =  "register_b_month";
+	public static final String ID_YEAR_OF_BIRTH_REG =  "register_b_year";
+	
+	public static final String ID_AGREED_CHECKBOX_REG =  "register_agreed";
+	public static final String LOCATOR_BUTTON_REG =  "//*[@role='button'][@onclick='register()']";
+	
+	//----------------------------------------------------------
+	
 	
 	static WebDriver driver = new FirefoxDriver();
 	
