@@ -7,6 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
+// This test case checks if text area for password input is enabled on the web page
+// after clicking on "Зарегистрироваться" link
+
+// EXPECTED RESULT: text area for password input is enabled
+// Pass/fail: pass
+
 public class TCase07PasswdTextArea {
 
 	@BeforeClass

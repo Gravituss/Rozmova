@@ -7,6 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
+// This test case checks if the web site operates properly our trying to submit form
+// without nickname
+
+// EXPECTED RESULT: After pushing "Войти" button web page is the same
+// Pass/fail: pass
+
 public class TCase10EmptyNicknameSubmit {
 	
 	public static final String PASSWORD = "Geo75891";

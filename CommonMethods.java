@@ -5,6 +5,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
+// This class contains xpath locators and ids for web elements and
+// some routine methods that used often
+
 public class CommonMethods {
 	
 	public static final String WEB_SITE_URL = "http://rozmova.in.ua/";

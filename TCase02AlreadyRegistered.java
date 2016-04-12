@@ -7,6 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
+// This test case checks if text "Уже регистрировались?" is enabled on the web page
+// after clicking on "Зарегистрироваться" link
+
+// EXPECTED RESULT: text "Уже регистрировались?" is enabled
+// Pass/fail: pass
+
 public class TCase02AlreadyRegistered {
 	
 	@BeforeClass

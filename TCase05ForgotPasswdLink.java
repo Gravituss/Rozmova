@@ -7,6 +7,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
+// This test case checks if "Забыли пароль?" link works
+
+// EXPECTED RESULT: "Забыли пароль?" link works
+// Pass/fail: pass
+
 public class TCase05ForgotPasswdLink {
 
 	@BeforeClass

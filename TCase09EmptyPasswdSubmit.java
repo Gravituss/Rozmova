@@ -1,5 +1,12 @@
 import static org.junit.Assert.*;
 
+
+// This test case checks if the web site operates properly our trying to submit form
+// without password
+
+// EXPECTED RESULT: After pushing "Войти" button web page is the same
+// Pass/fail: pass
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
