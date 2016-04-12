@@ -1,14 +1,14 @@
+import static org.junit.Assert.*;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class TCase01Authorize {
-	
+public class TCase03Nickname {
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -20,11 +20,12 @@ public class TCase01Authorize {
 
 	@Test
 	public void test() {
-	
+		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement authorize = CommonMethods.driver.findElement(By.id("ui-dialog-title-auth_dialog"));
-		boolean enabled = authorize.isEnabled();
-		assert(enabled);
+		WebElement nickLabel = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@for='login_nickname']"));
+		boolean enabled = nickLabel.isEnabled();
+		assert(enabled);		
 	}
+
 }
