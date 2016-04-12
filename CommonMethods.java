@@ -1,7 +1,9 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -81,5 +83,18 @@ public class CommonMethods {
 		CommonMethods.driver.get(CommonMethods.WEB_SITE_URL);
 		CommonMethods.inRussian();
 		CommonMethods.clickRegister();
+	}
+	
+	public static void putTextIntoTextAreaWithID(String text, String id){
+		
+		WebElement targetTextArea = driver.findElement(By.id(id));
+		targetTextArea.sendKeys(text);
+	}
+	
+	public static void selectTextInComboboxWithID(String text, String id){
+		
+		WebElement targetCombobox = driver.findElement(By.id(id));
+		Select dropdown = new Select(targetCombobox);
+		dropdown.selectByVisibleText(text);
 	}
 }
