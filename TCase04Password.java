@@ -4,13 +4,11 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class TCase02AlreadyRegistered {
-	
+public class TCase04Password {
+
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
@@ -25,8 +23,8 @@ public class TCase02AlreadyRegistered {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement alreadyRegistered = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@class='s-title']"));
-		boolean enabled = alreadyRegistered.isEnabled();
-		assert(enabled);
+		WebElement passLabel = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@for='login_password']"));
+		boolean enabled = passLabel.isEnabled();
+		assert(enabled);			
 	}
 }

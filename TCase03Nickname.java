@@ -27,5 +27,4 @@ public class TCase03Nickname {
 		boolean enabled = nickLabel.isEnabled();
 		assert(enabled);		
 	}
-
 }
