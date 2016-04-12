@@ -1,3 +1,5 @@
+import static org.junit.Assert.*;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -7,8 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-
-public class TCase01Authorize {
+public class TCase02AlreadyRegistered {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -21,11 +22,12 @@ public class TCase01Authorize {
 
 	@Test
 	public void test() {
-	
+		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement authorize = CommonMethods.driver.findElement(By.id("ui-dialog-title-auth_dialog"));
-		boolean enabled = authorize.isEnabled();
+		WebElement alreadyRegistered = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@class='s-title']"));
+		boolean enabled = alreadyRegistered.isEnabled();
 		assert(enabled);
 	}
+
 }
