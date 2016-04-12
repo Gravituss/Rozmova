@@ -1,3 +1,5 @@
+import java.util.Random;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,7 +16,8 @@ public class CommonMethods {
 	
 	//--------------------------- Constants for input
 	
-	public static final String IN_EMAIL_TEXT_AREA_REG = "d45llk556dfldkss53@gmail.com";
+	
+	public static final String IN_EMAIL_TEXT_AREA_REG = "d4s45k556dfldkss53@gmail.com";
 	public static final String IN_NAME_TEXT_AREA_REG = "Harry";
 	public static final String IN_SURNAME_TEXT_AREA_REG = "Bitkinson";
 	public static final String IN_NICKNAME_TEXT_AREA_REG = "Ladlkfdjlfk6546";
@@ -100,6 +103,15 @@ public class CommonMethods {
 		dropdown.selectByVisibleText(text);
 	}
 	
+	public static String getElement(int index, String id){
+		
+		WebElement targetCombobox = driver.findElement(By.id(id));
+		Select dropdown = new Select(targetCombobox);
+		dropdown.selectByIndex(index);
+		String visibleText = dropdown.getFirstSelectedOption().getText();
+		return visibleText;
+	}
+	
 	public static void fillingRegFormWithTemplateData(){
 		
 		putTextIntoTextAreaWithID(IN_EMAIL_TEXT_AREA_REG, ID_EMAIL_TEXT_AREA_REG);
@@ -126,4 +138,34 @@ public class CommonMethods {
 		boolean check = nickLabel.isEnabled();
 		return check;
 	}
+	
+	public static String generateRandomEmail(){
+		
+		final String ALPHABET = "abcdefghijklmnopqrstuvwxyz0123456789";
+		final int N = ALPHABET.length();
+		String email = "";
+		
+		Random r = new Random();
+		
+		for (int i = 0; i < 17; i++){
+			email = email + ALPHABET.charAt(r.nextInt(N));
+		}
+		
+		email = email + "7@gmail.com";
+		return email;
+	}
+	
+	public static String generateRandomNickname(){
+		
+		final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+		final int N = ALPHABET.length();
+		String nickname = "";
+		
+		Random r = new Random();
+		
+		for (int i = 0; i < 11; i++){
+			nickname = nickname + ALPHABET.charAt(r.nextInt(N));
+		}
+		return nickname;
+	}	
 }

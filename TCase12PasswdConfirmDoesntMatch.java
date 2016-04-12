@@ -29,6 +29,11 @@ public class TCase12PasswdConfirmDoesntMatch {
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
 		CommonMethods.fillingRegFormWithTemplateData();
+		CommonMethods.driver.findElement(By.id(CommonMethods.ID_EMAIL_TEXT_AREA_REG)).clear();
+		CommonMethods.driver.findElement(By.id(CommonMethods.ID_EMAIL_TEXT_AREA_REG)).sendKeys(CommonMethods.generateRandomEmail());
+		CommonMethods.driver.findElement(By.id(CommonMethods.ID_NICKNAME_TEXT_AREA_REG)).clear();
+		CommonMethods.driver.findElement(By.id(CommonMethods.ID_NICKNAME_TEXT_AREA_REG)).sendKeys(CommonMethods.generateRandomNickname());
+		
 		CommonMethods.driver.findElement(By.id(CommonMethods.ID_PASSWD_AGAIN_TEXT_AREA_REG)).clear();
 		CommonMethods.driver.findElement(By.id(CommonMethods.ID_PASSWD_AGAIN_TEXT_AREA_REG))
 			.sendKeys(CommonMethods.IN_PASSWD_AGAIN_TEXT_AREA_REG);

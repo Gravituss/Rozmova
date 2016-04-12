@@ -30,6 +30,8 @@ public class TCase11InvalidEmail {
 		
 		CommonMethods.fillingRegFormWithTemplateData();
 		CommonMethods.driver.findElement(By.id(CommonMethods.ID_EMAIL_TEXT_AREA_REG)).clear();
+		CommonMethods.driver.findElement(By.id(CommonMethods.ID_NICKNAME_TEXT_AREA_REG)).clear();
+		CommonMethods.driver.findElement(By.id(CommonMethods.ID_NICKNAME_TEXT_AREA_REG)).sendKeys(CommonMethods.generateRandomNickname());
 		
 		CommonMethods.driver.findElement(By.id(CommonMethods.ID_EMAIL_TEXT_AREA_REG)).sendKeys("dlksl1235");
 		
