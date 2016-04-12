@@ -31,6 +31,6 @@ public class TCase05ForgotPasswdLink {
 			linkWorks = true;
 		} else linkWorks = false;
 		
-		assert(linkWorks);			
+		assertTrue(linkWorks);			
 	}
 }

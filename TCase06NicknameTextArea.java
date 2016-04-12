@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-public class TCase04Password {
+public class TCase06NicknameTextArea {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -23,8 +23,8 @@ public class TCase04Password {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement passLabel = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@for='login_password']"));
-		boolean enabled = passLabel.isEnabled();
-		assertTrue(enabled);			
+		WebElement nnTextArea = CommonMethods.driver.findElement(By.id("login_nickname"));
+		boolean enabled = nnTextArea.isEnabled();
+		assertTrue(enabled);	
 	}
 }

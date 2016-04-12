@@ -25,6 +25,6 @@ public class TCase03Nickname {
 		
 		WebElement nickLabel = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@for='login_nickname']"));
 		boolean enabled = nickLabel.isEnabled();
-		assert(enabled);		
+		assertTrue(enabled);		
 	}
 }
