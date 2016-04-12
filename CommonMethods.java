@@ -12,6 +12,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonMethods {
 	
+	//--------------------------- Constants for input
+	
+	public static final String IN_EMAIL_TEXT_AREA_REG = "dljf45jfldkss53@gmail.com";
+	public static final String IN_NAME_TEXT_AREA_REG = "Harry";
+	public static final String IN_SURNAME_TEXT_AREA_REG = "Bitkinson";
+	public static final String IN_NICKNAME_TEXT_AREA_REG = "Ladlkfdjlfk6546";
+	public static final String IN_PASSWD_TEXT_AREA_REG = "kjhkuh65";
+	public static final String IN_PASSWD_AGAIN_TEXT_AREA_REG = "lrdss6846";
+	//-----
+	public static final String IN_DAY_OF_BIRTH_REG = "8";
+	public static final String IN_MONTH_OF_BIRTH_REG = "декабря";
+	public static final String IN_YEAR_OF_BIRTH_REG = "1987";
+	
+	//------------------------------ Locators
+	
 	public static final String WEB_SITE_URL = "http://rozmova.in.ua/";
 	public static final String LOCATOR_RUSSIAN_LANGUAGE = "//*[@class='language-select']//*[@href='/ru/?return=Lw==']";
 	public static final String ID_REGISTER_LINK = "login_link";
@@ -27,7 +42,7 @@ public class CommonMethods {
 	public static final String ID_PASSWORD_TEXT_AREA = "login_password";
 	public static final String LOCATOR_ENTER_BUTTON = "//*[contains(@class,'enter-submit')]";
 	
-	//--------------------------- Constants for more test cases
+	//--------------------------- Locators++
 	
 	public static final String ID_EMAIL_TEXT_AREA_REG = "register_username";
 	public static final String ID_NAME_TEXT_AREA_REG = "register_name";
@@ -42,19 +57,6 @@ public class CommonMethods {
 	//-----
 	public static final String ID_AGREED_CHECKBOX_REG = "register_agreed";
 	public static final String LOCATOR_BUTTON_REG = "//*[@role='button'][@onclick='register()']";
-	
-	//--------------------------- Constants for input
-	
-	public static final String IN_EMAIL_TEXT_AREA_REG = "dljfldjfldkss53@gmail.com";
-	public static final String IN_NAME_TEXT_AREA_REG = "Harry";
-	public static final String IN_SURNAME_TEXT_AREA_REG = "Bitkinson";
-	public static final String IN_NICKNAME_TEXT_AREA_REG = "Ladlkfdjlfk6546";
-	public static final String IN_PASSWD_TEXT_AREA_REG = "kjhkuh65";
-	public static final String IN_PASSWD_AGAIN_TEXT_AREA_REG = "lrdss6846";
-	//-----
-	public static final String IN_DAY_OF_BIRTH_REG = "08";
-	public static final String IN_MONTH_OF_BIRTH_REG = "декабря";
-	public static final String IN_YEAR_OF_BIRTH_REG = "1987";
 	
 	//--------------------------------------------
 	
@@ -96,5 +98,32 @@ public class CommonMethods {
 		WebElement targetCombobox = driver.findElement(By.id(id));
 		Select dropdown = new Select(targetCombobox);
 		dropdown.selectByVisibleText(text);
+	}
+	
+	public static void fillingRegFormWithTemplateData(){
+		
+		putTextIntoTextAreaWithID(IN_EMAIL_TEXT_AREA_REG, ID_EMAIL_TEXT_AREA_REG);
+		putTextIntoTextAreaWithID(IN_NAME_TEXT_AREA_REG, ID_NAME_TEXT_AREA_REG);
+		putTextIntoTextAreaWithID(IN_SURNAME_TEXT_AREA_REG, ID_SURNAME_TEXT_AREA_REG);
+		putTextIntoTextAreaWithID(IN_NICKNAME_TEXT_AREA_REG, ID_NICKNAME_TEXT_AREA_REG);
+		putTextIntoTextAreaWithID(IN_PASSWD_TEXT_AREA_REG, ID_PASSWD_TEXT_AREA_REG);
+		putTextIntoTextAreaWithID(IN_PASSWD_TEXT_AREA_REG, ID_PASSWD_AGAIN_TEXT_AREA_REG);
+		
+		selectTextInComboboxWithID(IN_DAY_OF_BIRTH_REG, ID_DAY_OF_BIRTH_REG);
+		selectTextInComboboxWithID(IN_MONTH_OF_BIRTH_REG, ID_MONTH_OF_BIRTH_REG);		
+		selectTextInComboboxWithID(IN_YEAR_OF_BIRTH_REG, ID_YEAR_OF_BIRTH_REG);		
+	}
+	
+	public static void clickCheckboxAndPushRegister(){
+		
+		driver.findElement(By.id(ID_AGREED_CHECKBOX_REG)).click();
+		driver.findElement(By.xpath(LOCATOR_BUTTON_REG)).click();
+	}
+	
+	public static boolean verifyNickLabelIsEnabled(){
+		
+		WebElement nickLabel = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_NICK_LABEL));
+		boolean check = nickLabel.isEnabled();
+		return check;
 	}
 }
