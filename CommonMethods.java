@@ -14,7 +14,7 @@ public class CommonMethods {
 	
 	//--------------------------- Constants for input
 	
-	public static final String IN_EMAIL_TEXT_AREA_REG = "d45vwaljfldkss53@gmail.com";
+	public static final String IN_EMAIL_TEXT_AREA_REG = "d45llk556dfldkss53@gmail.com";
 	public static final String IN_NAME_TEXT_AREA_REG = "Harry";
 	public static final String IN_SURNAME_TEXT_AREA_REG = "Bitkinson";
 	public static final String IN_NICKNAME_TEXT_AREA_REG = "Ladlkfdjlfk6546";
