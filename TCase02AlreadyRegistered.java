@@ -23,7 +23,7 @@ public class TCase02AlreadyRegistered {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement alreadyRegistered = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@class='s-title']"));
+		WebElement alreadyRegistered = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_ALREADY_REGISTERED));
 		boolean enabled = alreadyRegistered.isEnabled();
 		assertTrue(enabled);
 	}

@@ -23,7 +23,7 @@ public class TCase08EnterButton {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement enterButton = CommonMethods.driver.findElement(By.xpath("//*[contains(@class,'enter-submit')]"));
+		WebElement enterButton = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_ENTER_BUTTON));
 		boolean enabled = enterButton.isEnabled();
 		assertTrue(enabled);	
 	}

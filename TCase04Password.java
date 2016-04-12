@@ -23,7 +23,7 @@ public class TCase04Password {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement passLabel = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@for='login_password']"));
+		WebElement passLabel = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_PASSWORD_LABEL));
 		boolean enabled = passLabel.isEnabled();
 		assertTrue(enabled);			
 	}

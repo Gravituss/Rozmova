@@ -11,6 +11,18 @@ public class CommonMethods {
 	public static final String LOCATOR_RUSSIAN_LANGUAGE = "//*[@class='language-select']//*[@href='/ru/?return=Lw==']";
 	public static final String ID_REGISTER_LINK = "login_link";
 	
+	public static final String ID_AUTHORIZE_TEXT = "ui-dialog-title-auth_dialog";
+	public static final String LOCATOR_ALREADY_REGISTERED = "//*[@class='part-left']//*[@class='s-title']";
+	
+	public static final String LOCATOR_NICK_LABEL = "//*[@class='part-left']//*[@for='login_nickname']";
+	public static final String LOCATOR_PASSWORD_LABEL = "//*[@class='part-left']//*[@for='login_password']";
+	public static final String LOCATOR_FORGOT_PWD_LINK = "//*[@class='part-left']//*[@href='/core/auth/forgot']";
+	
+	public static final String ID_NICKNAME_TEXT_AREA = "login_nickname";
+	public static final String ID_PASSWORD_TEXT_AREA = "login_password";
+	public static final String LOCATOR_ENTER_BUTTON = "//*[contains(@class,'enter-submit')]";
+	
+	
 	static WebDriver driver = new FirefoxDriver();
 	
 	// Waiting for the link "По-русски" to appear and clicking on it

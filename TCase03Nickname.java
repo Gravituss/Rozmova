@@ -23,7 +23,7 @@ public class TCase03Nickname {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement nickLabel = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@for='login_nickname']"));
+		WebElement nickLabel = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_NICK_LABEL));
 		boolean enabled = nickLabel.isEnabled();
 		assertTrue(enabled);		
 	}

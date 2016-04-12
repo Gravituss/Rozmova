@@ -23,9 +23,11 @@ public class TCase05ForgotPasswdLink {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement forgotPasswdLink = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@href='/core/auth/forgot']"));
+		WebElement forgotPasswdLink = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_FORGOT_PWD_LINK));
 		forgotPasswdLink.click();
 		
+		// We check if forgotPasswdLink works by clicking on it and checking if target page contains 
+		// path /core/auth/forgot
 		boolean linkWorks;
 		if (CommonMethods.driver.getCurrentUrl().contains("/core/auth/forgot")){
 			linkWorks = true;

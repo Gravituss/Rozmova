@@ -23,7 +23,7 @@ public class TCase06NicknameTextArea {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement nnTextArea = CommonMethods.driver.findElement(By.id("login_nickname"));
+		WebElement nnTextArea = CommonMethods.driver.findElement(By.id(CommonMethods.ID_NICKNAME_TEXT_AREA));
 		boolean enabled = nnTextArea.isEnabled();
 		assertTrue(enabled);	
 	}

@@ -25,11 +25,11 @@ public class TCase10EmptyNicknameSubmit {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement nickLabel = CommonMethods.driver.findElement(By.xpath("//*[@class='part-left']//*[@for='login_nickname']"));
-		WebElement pwdTextArea = CommonMethods.driver.findElement(By.id("login_password"));
-		WebElement enterButton = CommonMethods.driver.findElement(By.xpath("//*[contains(@class,'enter-submit')]"));
+		WebElement nickLabel = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_NICK_LABEL));
+		WebElement pwdTextArea = CommonMethods.driver.findElement(By.id(CommonMethods.ID_PASSWORD_TEXT_AREA));
+		WebElement enterButton = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_ENTER_BUTTON));
 		
-		// We enter a nickname and click Enter button
+		// We enter our password and click Enter button
 		pwdTextArea.sendKeys(PASSWORD);
 		enterButton.click();
 		

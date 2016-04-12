@@ -23,7 +23,7 @@ public class TCase07PasswdTextArea {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement pwdTextArea = CommonMethods.driver.findElement(By.id("login_password"));
+		WebElement pwdTextArea = CommonMethods.driver.findElement(By.id(CommonMethods.ID_PASSWORD_TEXT_AREA));
 		boolean enabled = pwdTextArea.isEnabled();
 		assertTrue(enabled);			
 	}

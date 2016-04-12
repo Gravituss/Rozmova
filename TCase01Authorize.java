@@ -24,7 +24,7 @@ public class TCase01Authorize {
 	
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement authorize = CommonMethods.driver.findElement(By.id("ui-dialog-title-auth_dialog"));
+		WebElement authorize = CommonMethods.driver.findElement(By.id(CommonMethods.ID_AUTHORIZE_TEXT));
 		boolean enabled = authorize.isEnabled();
 		assertTrue(enabled);
 	}
