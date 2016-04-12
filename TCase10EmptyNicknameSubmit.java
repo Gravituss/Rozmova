@@ -31,7 +31,6 @@ public class TCase10EmptyNicknameSubmit {
 		
 		CommonMethods.openPageSelectRussianAndClickRegister();
 		
-		WebElement nickLabel = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_NICK_LABEL));
 		WebElement pwdTextArea = CommonMethods.driver.findElement(By.id(CommonMethods.ID_PASSWORD_TEXT_AREA));
 		WebElement enterButton = CommonMethods.driver.findElement(By.xpath(CommonMethods.LOCATOR_ENTER_BUTTON));
 		
@@ -41,7 +40,7 @@ public class TCase10EmptyNicknameSubmit {
 		
 		// If nickLabel is enabled then we are still at the same web page and the web site didn't allow
 		// entering without nickname
-		boolean enabled = nickLabel.isEnabled();
+		boolean enabled = CommonMethods.verifyNickLabelIsEnabled();
 		assertTrue(enabled);		
 	}
 }
