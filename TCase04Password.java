@@ -7,10 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-// This test case checks if "Пароль" text is enabled on the web page 
-// after clicking on "Зарегистрироваться" link
+// This test case checks if "Parol" text is enabled on the web page 
+// after clicking on "Zaregistrirovatsya" link
 
-// EXPECTED RESULT: "Пароль" text is enabled
+// EXPECTED RESULT: "Parol" text is enabled
 // Pass/fail: pass
 
 public class TCase04Password {

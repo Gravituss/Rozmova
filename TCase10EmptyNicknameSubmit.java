@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 // This test case checks if the web site operates properly our trying to submit form
 // without nickname
 
-// EXPECTED RESULT: After pushing "Войти" button web page is the same
+// EXPECTED RESULT: After pushing "Voyti" button web page is the same
 // Pass/fail: pass
 
 public class TCase10EmptyNicknameSubmit {

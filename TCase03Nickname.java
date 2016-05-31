@@ -7,10 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-// This test case checks if "Ник" text is enabled on the web page 
-// after clicking on "Зарегистрироваться" link
+// This test case checks if "Nik" text is enabled on the web page 
+// after clicking on "Zaregistrirovatsya" link
 
-// EXPECTED RESULT: "Ник" text is enabled
+// EXPECTED RESULT: "Nik" text is enabled
 // Pass/fail: pass
 
 public class TCase03Nickname {

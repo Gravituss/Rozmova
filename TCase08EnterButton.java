@@ -7,10 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-// This test case checks if "Войти" button is enabled on the web page
-// after clicking on "Зарегистрироваться" link
+// This test case checks if "Voyti" button is enabled on the web page
+// after clicking on "Zaregistrirovatsya" link
 
-// EXPECTED RESULT: "Войти" button is enabled
+// EXPECTED RESULT: "Voyti" button is enabled
 // Pass/fail: pass
 
 public class TCase08EnterButton {

@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 
 // This test case checks if text area for nickname input is enabled on the web page
-// after clicking on "Зарегистрироваться" link
+// after clicking on "Zaregistrirovatsya" link
 
 // EXPECTED RESULT: text area for nickname input is enabled
 // Pass/fail: pass
