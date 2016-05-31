@@ -65,7 +65,7 @@ public class CommonMethods {
 	
 	static WebDriver driver = new FirefoxDriver();
 	
-	// Waiting for the link "По-русски" to appear and clicking on it
+	// Waiting for the link "Po-russki" to appear and clicking on it
 	public static void inRussian(){
 
 		WebDriverWait wait = new WebDriverWait(CommonMethods.driver, 10);
@@ -74,7 +74,7 @@ public class CommonMethods {
 		CommonMethods.driver.findElement(By.xpath(LOCATOR_RUSSIAN_LANGUAGE)).click();
 	}
 	
-	// Waiting for the link "Зарегистрироваться" to appear and clicking on it
+	// Waiting for the link "Zaregistrirovatsya" to appear and clicking on it
 	public static void clickRegister(){
 		
 		WebDriverWait wait2 = new WebDriverWait(CommonMethods.driver, 10);
